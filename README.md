@@ -1,1 +1,1 @@
-# EFK-public
+# webpack-boilerplate

@@ -1,0 +1,233 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 1440px;
+  height: 100px;
+}
+
+.nav {
+  display: flex;
+
+  &-burger {
+    z-index: 1000;
+    width: 40px;
+    height: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 500ms;
+
+    &.active-burger::before {
+      transform: rotateZ(45deg);
+    }
+
+    &.active-burger span {
+      opacity: 0;
+    }
+
+    &.active-burger::after {
+      transform: rotateZ(-45deg);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 40px;
+      height: 4px;
+      background-color: #313940;
+      border-radius: 2px;
+      transform-origin: top left;
+      transition: all 500ms;
+    }
+
+    & span {
+      content: '';
+      position: absolute;
+      top: 13px;
+      width: 40px;
+      height: 4px;
+      background-color: #313940;
+      border-radius: 2px;
+      transition: all 500ms;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 40px;
+      height: 4px;
+      background-color: #313940;
+      border-radius: 2px;
+      transform-origin: bottom left;
+      transition: all 500ms;
+    }
+  }
+
+  &-overlay {
+    display: none;
+
+  }
+
+  &-container {
+    display: flex;
+  }
+
+  &-list {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    min-width: 35%;
+    padding: 100px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: #78c2ad;
+    box-shadow: 0 40px 20px #313940;
+    transform: translateX(-140%);
+    transition: all 500ms;
+
+    &.play-mode {
+      background-color: #f3969a;
+    }
+
+    &.nav-active {
+      transform: translateX(0);
+
+      & + .nav-overlay {
+        display: block;
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: all 500ms;
+      }
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-left: 30px;
+    font-weight: 500;
+    color: #f8f9fa;
+
+    &.active-route {
+      color: #000;
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 2px rgba(255, 255, 255, 0.7);
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: #66a593;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+
+      &.play-mode {
+        background-color: #c27679;
+      }
+    }
+
+    &:focus {
+      color: #000;
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 2px rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+.active-link {
+  color: #fff;
+  background-color: #66a593;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+  height: 90%;
+  margin-right: 10px;
+}
+
+.switch-container {
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 100%;
+  margin: 0 20px;
+
+  &-text {
+    font-weight: bold;
+    font-size: 20px;
+    color: #313940;
+    text-transform: uppercase;
+    transition: all 500ms;
+  }
+
+  &-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &-slider {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 45px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #78c2ad;
+    transition: 500ms;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      left: 7px;
+      bottom: 7px;
+      background-color: #fff;
+      transition: 500ms;
+    }
+  }
+
+  &-input:checked + .switch-slider {
+    background: #f3969a;
+  }
+
+  &-input:focus + .switch-slider {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  }
+
+  &-input:checked + .switch-slider::before {
+    transform: translateX(56px);
+  }
+}
+
+#switch-train.switch-active {
+  color: #78c2ad;
+}
+
+#switch-play.switch-active {
+  color: #f3969a;
+}
