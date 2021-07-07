@@ -3,7 +3,7 @@ import Card from "@/components/Card";
 import './Categories.scss';
 
 function Category1(): JSX.Element {
-  const initialPathCard = './cards/action-a/';
+  const initialPathCard = '/cards/action-a/';
   const initialPathAudio = './audio/action-a/';
   const items = [
     {name: 'cry', translate: 'плакать', image: `${initialPathCard}cry.jpg`, audio: `${initialPathAudio}cry.mp3`, id: 1},
