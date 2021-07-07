@@ -9,7 +9,7 @@ function Header(): JSX.Element {
   const [trainActive, setTrainActive] = useState(true);
   const items = [
     {name: 'Main page', href: '/', image: './menu/main-icon.jpg', id: 1},
-    {name: 'Action (Set A)', href: '/category-1', image: './menu/action1-icon.jpg', id: 2},
+    {name: 'Action (Set A)', href: '/category-1', image: './menu/action1-icon.png', id: 2},
     {name: 'Action (Set B)', href: '/category-2', image: './menu/action2-icon.jpg', id: 3},
     {name: 'Animal (Set A)', href: '/category-3', image: './menu/animal1-icon.jpg', id: 4},
     {name: 'Animal (Set B)', href: '/category-4', image: './menu/animal2-icon.jpg', id: 5},
