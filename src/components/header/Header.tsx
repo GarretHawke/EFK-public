@@ -8,7 +8,7 @@ function Header(): JSX.Element {
   const [menuActive, setMenuActive] = useState(false);
   const [trainActive, setTrainActive] = useState(true);
 
-  const initialPath = './menu/';
+  const initialPath = '../menu/';
   const items = [
     {name: 'Main page', href: '/', image: `${initialPath}main.png`, id: 1},
     {name: 'Action (Set A)', href: '/category-1', image: `${initialPath}action1.png`, id: 2},
