@@ -16,7 +16,8 @@ function App(): JSX.Element {
 
   //Category1
   const newArray1 = items[0];
-  //const newArraySliced1 = newArray1.concat();
+  //const newArraySliced1 = newArray1.concat().sort(() => Math.random() - 0.5);
+  //localStorage.setItem('sounds', JSON.stringify(newArraySliced1));
   //const newArrayRandomized1 = newArraySliced1.sort(() => Math.random() - 0.5);
   //const newAudioArray1 = newArrayRandomized1.concat();
   //const newAudioArrayRandomized1 = newAudioArray1.sort(() => Math.random() - 0.5);
@@ -73,14 +74,14 @@ function App(): JSX.Element {
 
   const pages = [
     {path: '/', component: <Main isPlayMode={isPlayMode} />, id: 0},
-    {path: '/category-1', component: <Category isPlayMode={isPlayMode} setPlayMode={setPlayMode} cardItems={newArray1} /* soundItems={newAudioArrayRandomized1} */ isGameStarted={isGameStarted} setGameStarted={setGameStarted} isEndGame={isEndGame} setEndGame={setEndGame} arrayOfAnswers={arrayOfAnswers} setAnswers={setAnswers} />, id: 1},
-    {path: '/category-2', component: <Category isPlayMode={isPlayMode} setPlayMode={setPlayMode} cardItems={newArray2} /* soundItems={newAudioArrayRandomized1} */ isGameStarted={isGameStarted} setGameStarted={setGameStarted} isEndGame={isEndGame} setEndGame={setEndGame} arrayOfAnswers={arrayOfAnswers} setAnswers={setAnswers} />, id: 2},
-    {path: '/category-3', component: <Category isPlayMode={isPlayMode} setPlayMode={setPlayMode} cardItems={newArray3} /* soundItems={newAudioArrayRandomized1} */ isGameStarted={isGameStarted} setGameStarted={setGameStarted} isEndGame={isEndGame} setEndGame={setEndGame} arrayOfAnswers={arrayOfAnswers} setAnswers={setAnswers} />, id: 3},
-    {path: '/category-4', component: <Category isPlayMode={isPlayMode} setPlayMode={setPlayMode} cardItems={newArray4} /* soundItems={newAudioArrayRandomized1} */ isGameStarted={isGameStarted} setGameStarted={setGameStarted} isEndGame={isEndGame} setEndGame={setEndGame} arrayOfAnswers={arrayOfAnswers} setAnswers={setAnswers} />, id: 4},
-    {path: '/category-5', component: <Category isPlayMode={isPlayMode} setPlayMode={setPlayMode} cardItems={newArray5} /* soundItems={newAudioArrayRandomized1} */ isGameStarted={isGameStarted} setGameStarted={setGameStarted} isEndGame={isEndGame} setEndGame={setEndGame} arrayOfAnswers={arrayOfAnswers} setAnswers={setAnswers} />, id: 5},
-    {path: '/category-6', component: <Category isPlayMode={isPlayMode} setPlayMode={setPlayMode} cardItems={newArray6} /* soundItems={newAudioArrayRandomized1} */ isGameStarted={isGameStarted} setGameStarted={setGameStarted} isEndGame={isEndGame} setEndGame={setEndGame} arrayOfAnswers={arrayOfAnswers} setAnswers={setAnswers} />, id: 6},
-    {path: '/category-7', component: <Category isPlayMode={isPlayMode} setPlayMode={setPlayMode} cardItems={newArray7} /* soundItems={newAudioArrayRandomized1} */ isGameStarted={isGameStarted} setGameStarted={setGameStarted} isEndGame={isEndGame} setEndGame={setEndGame} arrayOfAnswers={arrayOfAnswers} setAnswers={setAnswers} />, id: 7},
-    {path: '/category-8', component: <Category isPlayMode={isPlayMode} setPlayMode={setPlayMode} cardItems={newArray8} /* soundItems={newAudioArrayRandomized1} */ isGameStarted={isGameStarted} setGameStarted={setGameStarted} isEndGame={isEndGame} setEndGame={setEndGame} arrayOfAnswers={arrayOfAnswers} setAnswers={setAnswers} />, id: 8},
+    {path: '/category-1', component: <Category isPlayMode={isPlayMode} setPlayMode={setPlayMode} cardItems={newArray1} isGameStarted={isGameStarted} setGameStarted={setGameStarted} isEndGame={isEndGame} setEndGame={setEndGame} arrayOfAnswers={arrayOfAnswers} setAnswers={setAnswers} />, id: 1},
+    {path: '/category-2', component: <Category isPlayMode={isPlayMode} setPlayMode={setPlayMode} cardItems={newArray2} isGameStarted={isGameStarted} setGameStarted={setGameStarted} isEndGame={isEndGame} setEndGame={setEndGame} arrayOfAnswers={arrayOfAnswers} setAnswers={setAnswers} />, id: 2},
+    {path: '/category-3', component: <Category isPlayMode={isPlayMode} setPlayMode={setPlayMode} cardItems={newArray3} isGameStarted={isGameStarted} setGameStarted={setGameStarted} isEndGame={isEndGame} setEndGame={setEndGame} arrayOfAnswers={arrayOfAnswers} setAnswers={setAnswers} />, id: 3},
+    {path: '/category-4', component: <Category isPlayMode={isPlayMode} setPlayMode={setPlayMode} cardItems={newArray4} isGameStarted={isGameStarted} setGameStarted={setGameStarted} isEndGame={isEndGame} setEndGame={setEndGame} arrayOfAnswers={arrayOfAnswers} setAnswers={setAnswers} />, id: 4},
+    {path: '/category-5', component: <Category isPlayMode={isPlayMode} setPlayMode={setPlayMode} cardItems={newArray5} isGameStarted={isGameStarted} setGameStarted={setGameStarted} isEndGame={isEndGame} setEndGame={setEndGame} arrayOfAnswers={arrayOfAnswers} setAnswers={setAnswers} />, id: 5},
+    {path: '/category-6', component: <Category isPlayMode={isPlayMode} setPlayMode={setPlayMode} cardItems={newArray6} isGameStarted={isGameStarted} setGameStarted={setGameStarted} isEndGame={isEndGame} setEndGame={setEndGame} arrayOfAnswers={arrayOfAnswers} setAnswers={setAnswers} />, id: 6},
+    {path: '/category-7', component: <Category isPlayMode={isPlayMode} setPlayMode={setPlayMode} cardItems={newArray7} isGameStarted={isGameStarted} setGameStarted={setGameStarted} isEndGame={isEndGame} setEndGame={setEndGame} arrayOfAnswers={arrayOfAnswers} setAnswers={setAnswers} />, id: 7},
+    {path: '/category-8', component: <Category isPlayMode={isPlayMode} setPlayMode={setPlayMode} cardItems={newArray8} isGameStarted={isGameStarted} setGameStarted={setGameStarted} isEndGame={isEndGame} setEndGame={setEndGame} arrayOfAnswers={arrayOfAnswers} setAnswers={setAnswers} />, id: 8},
 
   ]
 

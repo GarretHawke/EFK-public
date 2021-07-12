@@ -7,6 +7,10 @@ function Card({ item, isPlayMode, arrayOfAnswers, setAnswers, arrayName, numberO
   const [isFlipped, setFlipped] = useState(false);
   let [isDisable, setDisable] = useState(false);
 
+  const failureSound = new Audio('/audio/fail.mp3');
+  const winSound = new Audio('/audio/win.mp3');
+
+
   useEffect(() => {
     if (isPlayMode === false) {
       setDisable(false);
@@ -34,11 +38,11 @@ function Card({ item, isPlayMode, arrayOfAnswers, setAnswers, arrayName, numberO
     } else return;
 
     if (numberOfItem === 8) {
-      setEndGame(true);
-      setNumberOfItem(0);
       const STARS = document.querySelectorAll('.false');
-      console.log(STARS.length);
       localStorage.setItem('errors', `${STARS.length}`);
+      setEndGame(true);
+      STARS.length > 0 ? failureSound.play() : winSound.play();
+      setNumberOfItem(0);
     }
   }
 
