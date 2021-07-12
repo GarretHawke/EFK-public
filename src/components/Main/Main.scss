@@ -12,6 +12,10 @@
     height: fit-content;
     padding: 20px;
   }
+
+  &.play-mode .categories-link {
+    background-color: #f3969a;
+  }
 }
 
 .categories-list {

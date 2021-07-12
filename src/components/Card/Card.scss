@@ -2,7 +2,6 @@
   margin: 15px;
   transition: all 500ms;
   border-radius: 5px;
-  /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 18%), 0 2px 10px 0 rgba(0, 0, 0, 18%); */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -12,17 +11,14 @@
   width: 250px;
   height: 250px;
   margin: 15px;
-  /* overflow: hidden; */
   border-radius: 5px;
   text-decoration: none;
   font-weight: 500;
   color: #f8f9fa;
-  /* background-color: #78c2ad; */
   font-size: 24px;
   cursor: pointer;
 
   &:hover {
-    /* box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 25%), 0 6px 20px 0 rgba(0, 0, 0, 25%); */
     transform: translateY(-10px);
   }
 
@@ -38,6 +34,30 @@
     opacity: 0;
   }
 
+  &.play-mode {
+    height: 210px;
+  }
+
+  &.play-mode .back {
+    display:none;
+  }
+
+  &.play-mode .flip-button {
+    display: none;
+  }
+
+  &.play-mode .front {
+    background-color: #f3969a;
+  }
+
+  &.play-mode .card-content {
+    height: 10px;
+  }
+
+  &.play-mode .card-content span {
+    display: none;
+  }
+
 }
 
 .front {
@@ -49,8 +69,14 @@
   top: 0;
   left: 0;
   backface-visibility: hidden;
-  transition: 1000ms;
+  transition: transform 1000ms;
   width: 100%;
+
+  &.disable {
+    opacity: 50%;
+    box-shadow: none;
+    cursor: default;
+  }
 }
 
 .back {
@@ -65,7 +91,7 @@
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
-  transition: 1000ms;
+  transition: transform 1000ms;
   width: 100%;
 }
 

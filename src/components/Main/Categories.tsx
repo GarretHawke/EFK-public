@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import './Main.scss';
 
-function Categories({ items }: {items: {name: string, href: string, image: string, id: number}[]}): JSX.Element {
+function Categories({ items, isPlayMode}: {items: {name: string, href: string, image: string, id: number}[], isPlayMode: boolean}): JSX.Element {
+
   return (
-    <div className='container'>
+    <div className={isPlayMode ? 'container play-mode' : 'container'}>
       <div className='container-inner'>
         <ul className='categories-list'>
           {items.map(item =>

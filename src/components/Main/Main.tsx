@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import Categories from "./Categories";
 import './Main.scss';
 
-function Main(): JSX.Element {
+function Main({ isPlayMode }: {isPlayMode: boolean}): JSX.Element {
+
   const items = [
     {name: 'Action (Set A)', href: '/category-1', image: './cards/action-a/dance.jpg', id: 1},
     {name: 'Action (Set B)', href: '/category-2', image: './cards/action-b/play.jpg', id: 2},
@@ -15,7 +16,7 @@ function Main(): JSX.Element {
   ]
 
   return (
-    <Categories items={items} />
+    <Categories items={items} isPlayMode={isPlayMode} />
   );
 }
 
